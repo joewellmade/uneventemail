@@ -64,14 +64,14 @@
 			* @tip Set the styling for all first-level headings in your emails. These should be the largest of your headings.
 			* @style heading 1
 			*/
-			h1{
+			h1 {
 				/*@editable*/ color:#ab7918 !important;
 				display:block;
 				/*@editable*/ font-family: Arial, Helvetica;
 				/*@editable*/ font-size:16px;
 				/*@editable*/ font-style:normal;
 				/*@editable*/ font-weight:bold;
-				/*@editable*/ line-height:100%;
+				/*@editable*/ line-height:140%;
 				/*@editable*/ letter-spacing:normal;
 				margin-top:0;
 				margin-right:0;
@@ -80,10 +80,21 @@
 				/*@editable*/ text-align:center;
 				text-transform: uppercase;
 			}
+			.h1 {
+				font-family: Arial, Helvetica;
+				/*@editable*/ font-family: Arial, Helvetica;
+				/*@editable*/ font-size:16px;
+				/*@editable*/ font-style:normal;
+				/*@editable*/ font-weight:bold;
+				/*@editable*/ line-height:140%;
+				/*@editable*/ letter-spacing:normal;
+				/*@editable*/ text-align:center;
+				text-transform: uppercase;
+			}
 			.bodyContent h1 {
 				border: 2px solid #ab7918;
 				padding: 10px;
-				margin: 0 20%;
+				margin: 0 20% 20px 20%;
 			}
 			/**
 			* @tab Page
@@ -245,8 +256,8 @@
 			#templateBody{
 				/*@editable background-color:#F4F4F4;*/
 				/*@editable*/ border-top:1px solid #FFFFFF;
-				/*@editable*/ border-bottom:1px solid #CCCCCC;
-				height: 1200px;
+				/*@editable*/ border-bottom:0px solid #CCCCCC;
+				height: 850px;
 			}
 
 			/**
@@ -260,12 +271,18 @@
 				/*@editable*/ font-family:Georgia;
 				/*@editable*/ font-size:20px;
 				/*@editable*/ line-height:150%;
-				padding-top:20px;
+				padding-top:5px;
 				padding-right:20px;
 				padding-bottom:20px;
 				padding-left:20px;
 				/*@editable*/ text-align:center;
 			}
+			#arrows {
+				max-width: 271px;
+				display: block;
+				margin: 0 auto;
+			}
+			
 
 			/**
 			* @tab Body
@@ -282,6 +299,9 @@
 				display:inline;
 				height:auto;
 				max-width:560px;
+			}
+			.bodyContent img {
+				margin-top: 20px;
 			}
 
 			/* ========== Footer Styles ========== */
@@ -349,25 +369,29 @@
 					max-width:600px !important;
 					/*@editable*/ width:100% !important;
 				}
-
+				#templateBody{
+					height: 550px;
+				}
 				/**
 				* @tab Mobile Styles
 				* @section heading 1
 				* @tip Make the first-level headings larger in size for better readability on small screens.
 				*/
 				h1{
-					/*@editable*/ font-size:24px !important;
+					/*@editable*/ font-size:11px !important;
 					/*@editable*/ line-height:100% !important;
 					text-align: center;
 				}
-
+				.h1 {
+					font-size: 11px;
+				}
 				/**
 				* @tab Mobile Styles
 				* @section heading 2
 				* @tip Make the second-level headings larger in size for better readability on small screens.
 				*/
 				h2{
-					/*@editable*/ font-size:20px !important;
+					/*@editable*/ font-size:12px !important;
 					/*@editable*/ line-height:100% !important;
 				}
 
@@ -377,7 +401,7 @@
 				* @tip Make the third-level headings larger in size for better readability on small screens.
 				*/
 				h3{
-					/*@editable*/ font-size:18px !important;
+					/*@editable*/ font-size:12px !important;
 					/*@editable*/ line-height:100% !important;
 				}
 
@@ -405,7 +429,12 @@
 					/*@editable*/ max-width:600px !important;
 					/*@editable*/ width:100% !important;
 				}
-
+				#arrows{
+					max-width: 172px;
+				}
+				#rsvpImage {
+					max-width: 80px;
+				}
 				/**
 				* @tab Mobile Styles
 				* @section header text
@@ -435,8 +464,14 @@
 				* @tip Make the body content text larger in size for better readability on small screens. We recommend a font size of at least 16px.
 				*/
 				.bodyContent{
-					/*@editable*/ font-size:18px !important;
+					/*@editable*/ font-size:12px !important;
 					/*@editable*/ line-height:125% !important;
+				}
+				.bodyContent h1 {
+					margin-bottom: 5px !important;
+				}
+				.bodyContent img {
+					margin-top: 10px;
 				}
 
 				/* ======== Footer Styles ======== */
@@ -485,11 +520,15 @@
 												• Unwind at home •<br />
 												• Avoid unwanted auction lots •<br />
 												• Evade unwelcome hangovers... and hangers on •<br />
+												<img src="arrows.gif" id="arrows" />
+												<span class="h1">Unevent Tickets:</span> £100 - £1000<br />
+												<span class="h1">Dress:</span> Noting but Chanel No 5 <span class="h1">Uber:</span> Unnecessary
+												<img src="rsvp.jpg" style="max-width:560px;" id="rsvpImage" />
                                             </td>
                                         </tr>
                                     	<tr>
                                         	<td class="bodyContent" style="padding-top:0; padding-bottom:0;">
-                                            	<img src="" style="max-width:560px;" id="bodyImage" mc:label="body_image" mc:edit="body_image" mc:allowtext />
+                                            	
                                             </td>
                                         </tr>
                                         <tr>
